@@ -1,0 +1,28 @@
+{
+  "name": "javascript-snippets",
+  "version": "1.0.0",
+  "description": "The snippets of JavaScript",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hackers267/javascript-snippets.git"
+  },
+  "keywords": [
+    "javascript",
+    "snippets"
+  ],
+  "author": "silence_zhpf",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/hackers267/javascript-snippets/issues"
+  },
+  "homepage": "https://github.com/hackers267/javascript-snippets#readme",
+  "devDependencies": {
+    "@types/jest": "^24.0.24",
+    "@types/node": "^12.12.21",
+    "jest": "^24.9.0"
+  }
+}
