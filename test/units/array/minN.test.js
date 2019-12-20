@@ -1,5 +1,4 @@
-const {minN} = require('../../../src/array/minN');
-
+const { minN } = require("../../../src/array/minN");
 
 describe("The minN of Array", () => {
   test("The default", () => {
@@ -16,5 +15,5 @@ describe("The minN of Array", () => {
     const expected = [1, 4, 14];
     expect(result.length).toEqual(number);
     expect(result).toEqual(expect.arrayContaining(expected));
-  })
+  });
 });

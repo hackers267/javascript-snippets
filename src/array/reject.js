@@ -1,5 +1,3 @@
-exports.reject = reject;
-
 /**
  * @callback pred 断言函数
  * @param {*} args 数组过滤参数中对应的值 value,index,array
@@ -14,5 +12,7 @@ exports.reject = reject;
  * @return {Array} 过滤后的数组
  */
 function reject(pred, array) {
-  return array.filter((...args) => pred(...args))
+  return array.filter((...args) => pred(...args));
 }
+
+exports.reject = reject;

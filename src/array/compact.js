@@ -5,5 +5,5 @@
  * @returns {Array} 原数组中真值组成的数组
  */
 exports.compact = function compact(array) {
-  return array.filter(n => n)
+  return array.filter(n => n);
 };

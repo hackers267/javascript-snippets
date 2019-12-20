@@ -1,5 +1,6 @@
-const {maxN} = require('../../../src/array/maxN');
-describe('The maxN of Array', function () {
+const { maxN } = require("../../../src/array/maxN");
+
+describe("The maxN of Array", () => {
   test("The default", () => {
     const array = [3, 8, 19, 4, 5];
     const expected = [19];
@@ -14,5 +15,5 @@ describe('The maxN of Array', function () {
     const result = maxN(array, maxNumber);
     expect(result.length).toEqual(maxNumber);
     expect(result).toEqual(expect.arrayContaining(expected));
-  })
+  });
 });
