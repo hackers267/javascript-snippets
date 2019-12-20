@@ -10,7 +10,7 @@ describe("The remove of Array", () => {
   test("should has 2 items", () => {
     const result = remove(arr, predicate);
     const expected = 2;
-    expect(result.length).toEqual(expected);
+    expect(result).toHaveLength(expected);
   });
   test("should includes 0 and 1", () => {
     const result = remove(arr, predicate);
