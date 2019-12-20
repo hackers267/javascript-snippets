@@ -1591,6 +1591,223 @@
 
 
 
+    <h4 class="name" id="offset"><span class="type-signature"></span>offset<span class="signature">(array, n<span class="signature-attributes">opt</span>)</span><span class="type-signature"> &rarr; {Array}</span></h4>
+
+
+
+
+
+
+<div class="description">
+    在数组内移动数组中的元素
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+
+
+<table class="params">
+    <thead>
+    <tr>
+
+        <th>Name</th>
+
+
+        <th>Type</th>
+
+
+        <th>Attributes</th>
+
+
+
+        <th>Default</th>
+
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+
+
+        <tr>
+
+                <td class="name"><code>array</code></td>
+
+
+            <td class="type">
+
+
+<span class="param-type">Array</span>
+
+
+
+            </td>
+
+
+                <td class="attributes">
+
+
+
+
+
+                </td>
+
+
+
+                <td class="default">
+
+                </td>
+
+
+            <td class="description last">需要操作的数组</td>
+        </tr>
+
+
+
+        <tr>
+
+                <td class="name"><code>n</code></td>
+
+
+            <td class="type">
+
+
+<span class="param-type">number</span>
+
+
+
+            </td>
+
+
+                <td class="attributes">
+
+                    &lt;optional><br>
+
+
+
+
+
+                </td>
+
+
+
+                <td class="default">
+
+                    0
+
+                </td>
+
+
+            <td class="description last">需要移动的数量，如果为正数，则将前n个元素移动到数组后边（保持原有顺序），如果为负数，则将最后n个元素移动到数组前（保持原有顺序）</td>
+        </tr>
+
+
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <dt class="tag-author">Author:</dt>
+    <dd class="tag-author">
+        <ul>
+            <li>silence_zhpf</li>
+        </ul>
+    </dd>
+
+
+
+
+
+
+
+
+
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="offset.js.html">offset.js</a>, <a href="offset.js.html#line8">line 8</a>
+    </li></ul></dd>
+
+
+
+
+
+
+
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+
+<span class="param-type">Array</span>
+
+
+    </dd>
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
     <h4 class="name" id="reject"><span class="type-signature"></span>reject<span class="signature">(array, pred)</span><span class="type-signature"> &rarr; {Array}</span></h4>
 
 
@@ -2148,6 +2365,215 @@
 
 
 
+
+
+    <h4 class="name" id="without"><span class="type-signature"></span>without<span class="signature">(array, &hellip;args)</span><span class="type-signature"> &rarr; {Array}</span></h4>
+
+
+
+
+
+
+<div class="description">
+    从数组中挑选出和给出的参数不一样的元素组成一个新的数组
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+
+
+<table class="params">
+    <thead>
+    <tr>
+
+        <th>Name</th>
+
+
+        <th>Type</th>
+
+
+        <th>Attributes</th>
+
+
+
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+
+
+        <tr>
+
+                <td class="name"><code>array</code></td>
+
+
+            <td class="type">
+
+
+<span class="param-type">Array</span>
+
+
+
+            </td>
+
+
+                <td class="attributes">
+
+
+
+
+
+                </td>
+
+
+
+
+            <td class="description last">被挑选的数组</td>
+        </tr>
+
+
+
+        <tr>
+
+                <td class="name"><code>args</code></td>
+
+
+            <td class="type">
+
+
+<span class="param-type">*</span>
+
+
+
+            </td>
+
+
+                <td class="attributes">
+
+
+
+
+
+                    &lt;repeatable><br>
+
+                </td>
+
+
+
+
+            <td class="description last">参数</td>
+        </tr>
+
+
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <dt class="tag-author">Author:</dt>
+    <dd class="tag-author">
+        <ul>
+            <li>silence_zhpf</li>
+        </ul>
+    </dd>
+
+
+
+
+
+
+
+
+
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="without.js.html">without.js</a>, <a href="without.js.html#line8">line 8</a>
+    </li></ul></dd>
+
+
+
+
+
+
+
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+
+<div class="param-desc">
+    数组中剩余元素组成的数组
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+
+<span class="param-type">Array</span>
+
+
+    </dd>
+</dl>
+
+
+
+
+
+
+
+
+
+
+
         <h3 class="subsection-title">Type Definitions</h3>
 
 
@@ -2458,13 +2884,13 @@
 </div>
 
 <nav>
-    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#compact">compact</a></li><li><a href="global.html#difference">difference</a></li><li><a href="global.html#head">head</a></li><li><a href="global.html#includeAll">includeAll</a></li><li><a href="global.html#includeAny">includeAny</a></li><li><a href="global.html#last">last</a></li><li><a href="global.html#maxN">maxN</a></li><li><a href="global.html#minN">minN</a></li><li><a href="global.html#reject">reject</a></li><li><a href="global.html#remove">remove</a></li><li><a href="global.html#similarity">similarity</a></li></ul>
+    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#compact">compact</a></li><li><a href="global.html#difference">difference</a></li><li><a href="global.html#head">head</a></li><li><a href="global.html#includeAll">includeAll</a></li><li><a href="global.html#includeAny">includeAny</a></li><li><a href="global.html#last">last</a></li><li><a href="global.html#maxN">maxN</a></li><li><a href="global.html#minN">minN</a></li><li><a href="global.html#offset">offset</a></li><li><a href="global.html#reject">reject</a></li><li><a href="global.html#remove">remove</a></li><li><a href="global.html#similarity">similarity</a></li><li><a href="global.html#without">without</a></li></ul>
 </nav>
 
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.3</a> on Fri Dec 20 2019 14:27:19 GMT+0800 (China Standard Time)
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.3</a> on Fri Dec 20 2019 17:30:19 GMT+0800 (China Standard Time)
 </footer>
 
 <script> prettyPrint(); </script>
