@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Source: remove.js</title>
+    <title>JSDoc: Source: difference.js</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,7 +17,7 @@
 
 <div id="main">
 
-    <h1 class="page-title">Source: remove.js</h1>
+    <h1 class="page-title">Source: difference.js</h1>
 
 
 
@@ -27,21 +27,18 @@
     <section>
         <article>
             <pre class="prettyprint source linenums"><code>/**
- * @callback fn
- * @param {*} value 输入值
- * @return {boolean}
- */
-
-/**
  * @author silence_zhpf
- * @description 根据断言函数(fn)移除数组中断言函数为true的数组，并返回新的数组
- * @param {Array} arr 需要整理的数组
- * @param {fn} fn
- * @returns {Array}
+ * @description 返回第一个数组和第二个数组的差集（只存在于第一个，而不存在于第二个数组的元素的集合）
+ * @param {Array} firstArray 第一个数组
+ * @param {Array} secondArray 第二个数组
+ * @return {Array}
  */
-exports.remove = function remove(arr, fn) {
-  return Array.isArray(arr) ? arr.filter(val => !fn(val)) : [];
-};
+function difference(firstArray, secondArray) {
+  const set = new Set(secondArray);
+  return firstArray.filter(value => !set.has(value));
+}
+
+exports.difference = difference;
 </code></pre>
         </article>
     </section>
