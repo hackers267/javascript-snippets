@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Source: compact.js</title>
+    <title>JSDoc: Source: similarity.js</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,7 +17,7 @@
 
 <div id="main">
 
-    <h1 class="page-title">Source: compact.js</h1>
+    <h1 class="page-title">Source: similarity.js</h1>
 
 
 
@@ -28,13 +28,17 @@
         <article>
             <pre class="prettyprint source linenums"><code>/**
  * @author silence_zhpf
- * @description 去除数组中的假值，返回数组中由真值组陈的数组
- * @param {Array} array 数组
- * @returns {Array} 原数组中真值组成的数组
+ * @description 返回两个数组的交集（同时存在于两个数组中的元素组成的元素）
+ * @param {Array} firstArray 第一个数组
+ * @param {Array} secondArray 第二个数组
+ * @return {Array}
  */
-exports.compact = function compact(array) {
-  return array.filter(n => n);
-};
+function similarity(firstArray, secondArray) {
+  const set = new Set(secondArray);
+  return firstArray.filter(value => set.has(value));
+}
+
+exports.similarity = similarity;
 </code></pre>
         </article>
     </section>
