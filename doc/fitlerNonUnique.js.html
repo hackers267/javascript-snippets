@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Source: last.js</title>
+    <title>JSDoc: Source: fitlerNonUnique.js</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,7 +17,7 @@
 
 <div id="main">
 
-    <h1 class="page-title">Source: last.js</h1>
+    <h1 class="page-title">Source: fitlerNonUnique.js</h1>
 
 
 
@@ -28,17 +28,17 @@
         <article>
             <pre class="prettyprint source linenums"><code>/**
  * @author silence_zhpf
- * @description 获取数组中的最后一个元素
- * @param {Array} array 数组
- * @returns {*}
+ * @description 过滤出数组中的非唯一值，并返回对应的数组（数组中非唯一值只出现一次）
+ * @param array {Array}
+ * @return {Array}
  */
-exports.last = function last(array) {
-  if (Array.isArray(array)) {
-    const len = array.length;
-    return array[len - 1];
-  }
-  return undefined;
-};
+function filterNonUnique(array) {
+  const nonUnique = array.filter(
+    index => array.indexOf(index) !== array.lastIndexOf(index)
+  );
+  return Array.from(new Set(nonUnique));
+}
+exports.filterNonUnique = filterNonUnique;
 </code></pre>
         </article>
     </section>
