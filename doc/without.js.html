@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Source: similarity.js</title>
+    <title>JSDoc: Source: without.js</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,7 +17,7 @@
 
 <div id="main">
 
-    <h1 class="page-title">Source: similarity.js</h1>
+    <h1 class="page-title">Source: without.js</h1>
 
 
 
@@ -28,17 +28,16 @@
         <article>
             <pre class="prettyprint source linenums"><code>/**
  * @author silence_zhpf
- * @description 返回两个数组的交集（同时存在于两个数组中的元素组成的元素）
- * @param {Array} firstArray 第一个数组
- * @param {Array} secondArray 第二个数组
- * @return {Array}
+ * @description 从数组中挑选出和给出的参数不一样的元素组成一个新的数组
+ * @param {Array} array 被挑选的数组
+ * @param {*} args  参数
+ * @return {Array}  数组中剩余元素组成的数组
  */
-function similarity(firstArray, secondArray) {
-  const set = new Set(secondArray);
-  return firstArray.filter(value => set.has(value));
+function without(array, ...args) {
+  return array.filter(value => !args.includes(value));
 }
 
-exports.similarity = similarity;
+exports.without = without;
 </code></pre>
         </article>
     </section>

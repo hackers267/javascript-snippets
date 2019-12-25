@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Source: similarity.js</title>
+    <title>JSDoc: Source: everyNth.js</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,7 +17,7 @@
 
 <div id="main">
 
-    <h1 class="page-title">Source: similarity.js</h1>
+    <h1 class="page-title">Source: everyNth.js</h1>
 
 
 
@@ -28,17 +28,16 @@
         <article>
             <pre class="prettyprint source linenums"><code>/**
  * @author silence_zhpf
- * @description 返回两个数组的交集（同时存在于两个数组中的元素组成的元素）
- * @param {Array} firstArray 第一个数组
- * @param {Array} secondArray 第二个数组
- * @return {Array}
+ * @description 从array中每间隔 n 个元素挑选出一个元素，组成新的数组
+ * @param array {Array} 元素数组
+ * @param n {number}  间隔
+ * @return {Array} 组成的新数组
  */
-function similarity(firstArray, secondArray) {
-  const set = new Set(secondArray);
-  return firstArray.filter(value => set.has(value));
+function everyNth(array, n) {
+  return array.filter((_, index) => index % n === n - 1);
 }
 
-exports.similarity = similarity;
+exports.everyNth = everyNth;
 </code></pre>
         </article>
     </section>
