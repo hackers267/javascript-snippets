@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Source: includeAny.js</title>
+    <title>JSDoc: Source: filterFalsy.js</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,7 +17,7 @@
 
 <div id="main">
 
-    <h1 class="page-title">Source: includeAny.js</h1>
+    <h1 class="page-title">Source: filterFalsy.js</h1>
 
 
 
@@ -28,14 +28,15 @@
         <article>
             <pre class="prettyprint source linenums"><code>/**
  * @author silence_zhpf
- * @description 判断第一个数组（父数组）中是否包含第二个数组（子数组）中的任意元素，存在->true,不存在->false
- * @param {Array} parentArray 父数组
- * @param {Array} childArray 子数组
- * @returns {boolean}
+ * @description 过滤数组中的所有假值，剩下由真值组成的数组
+ * @param array {Array} 普通数组
+ * @return {Array} 由真值组成的数组
  */
-exports.includeAny = function includeAny(parentArray, childArray) {
-  return childArray.some(value => parentArray.includes(value));
-};
+function filterFalsy(array) {
+  return array.filter(Boolean);
+}
+
+exports.filterFalsy = filterFalsy;
 </code></pre>
         </article>
     </section>
