@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/hackers267/javascript-snippets#readme",
   "dependencies": {
+    "chalk": "^3.0.0",
     "yargs": "^15.0.0"
   },
   "devDependencies": {
