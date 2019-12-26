@@ -1,0 +1,5 @@
+const { name } = require("../../../src/array/name");
+
+describe("", () => {
+  test("", () => {});
+});
