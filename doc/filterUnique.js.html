@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Source: maxN.js</title>
+    <title>JSDoc: Source: filterUnique.js</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,7 +17,7 @@
 
 <div id="main">
 
-    <h1 class="page-title">Source: maxN.js</h1>
+    <h1 class="page-title">Source: filterUnique.js</h1>
 
 
 
@@ -28,16 +28,20 @@
         <article>
             <pre class="prettyprint source linenums"><code>/**
  * @author silence_zhpf
- * @description 取数组中的前n个最大的值，并且按从大到小的顺序组成数组
- * @param {number[]} array 需要取值的数组
- * @param {number} [n=1]
- * @returns {number[]}
+ * @description 获取数组元素中的唯一值，实现中认为 NaN和自身是相等的。
+ * @param array {Array} 需要处理的数组
+ * @return {Array} 只含有唯一值的数组
  */
-exports.maxN = function maxN(array, n = 1) {
-  return Array.from(array)
-    .sort((a, b) => b - a)
-    .slice(0, n);
-};
+function filterUnique(array) {
+  return array.filter(value => {
+    const index = array.findIndex(value1 => Object.is(value1, value));
+    const remainArray = array.slice(index + 1);
+    const nextIndex = remainArray.findIndex(value1 => Object.is(value1, value));
+    return nextIndex === -1;
+  });
+}
+
+exports.filterUnique = filterUnique;
 </code></pre>
         </article>
     </section>
