@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Source: filterFalsy.js</title>
+    <title>JSDoc: Source: findLast.js</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,7 +17,7 @@
 
 <div id="main">
 
-    <h1 class="page-title">Source: filterFalsy.js</h1>
+    <h1 class="page-title">Source: findLast.js</h1>
 
 
 
@@ -28,15 +28,16 @@
         <article>
             <pre class="prettyprint source linenums"><code>/**
  * @author silence_zhpf
- * @description 过滤数组中的所有假值，剩下由真值组成的数组
- * @param array {Array} 普通数组
- * @return {Array} 由真值组成的数组
+ * @description 找出数组中符合断言的最后一个元素
+ * @param array {Array} 原数组
+ * @param predicate {fn} 断言函数
+ * @return {any}
  */
-function filterFalsy(array) {
-  return array.filter(Boolean);
+function findLast(array, predicate) {
+  return array.filter(value => predicate(value)).pop();
 }
 
-exports.filterFalsy = filterFalsy;
+exports.findLast = findLast;
 </code></pre>
         </article>
     </section>
