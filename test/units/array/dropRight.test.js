@@ -23,4 +23,10 @@ describe("从数组尾部剔除值", () => {
     expect(result).not.toContain(cullArray[0]);
     expect(result).not.toContain(cullArray[1]);
   });
+  test("剔除所有元素,n值大于数组长度", () => {
+    const array = [1, 2, 3, 4];
+    const n = 6;
+    const result = dropRight(array, n);
+    expect(result).toHaveLength(0);
+  });
 });
