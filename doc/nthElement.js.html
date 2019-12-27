@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Source: remove.js</title>
+    <title>JSDoc: Source: nthElement.js</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,7 +17,7 @@
 
 <div id="main">
 
-    <h1 class="page-title">Source: remove.js</h1>
+    <h1 class="page-title">Source: nthElement.js</h1>
 
 
 
@@ -27,21 +27,17 @@
     <section>
         <article>
             <pre class="prettyprint source linenums"><code>/**
- * @callback fn
- * @param {*} value 输入值
- * @return {boolean}
- */
-
-/**
  * @author silence_zhpf
- * @description 根据断言函数(fn)移除数组中断言函数为true的数组，并返回新的数组
- * @param {Array} arr 需要整理的数组
- * @param {fn} fn
- * @returns {Array}
+ * @description 取第n个元素
+ * @param array {Array} 需要取值的元素
+ * @param n {number} [n=0] 取值元素的下标
+ * @return {*}
  */
-exports.remove = function remove(arr, fn) {
-  return Array.isArray(arr) ? arr.filter(val => !fn(val)) : [];
-};
+function nthElement(array, n = 0) {
+  return (n === -1 ? array.slice(n) : array.slice(n, n + 1))[0];
+}
+
+exports.nthElement = nthElement;
 </code></pre>
         </article>
     </section>
