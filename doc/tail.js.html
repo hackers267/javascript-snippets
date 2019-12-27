@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Source: offset.js</title>
+    <title>JSDoc: Source: tail.js</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,7 +17,7 @@
 
 <div id="main">
 
-    <h1 class="page-title">Source: offset.js</h1>
+    <h1 class="page-title">Source: tail.js</h1>
 
 
 
@@ -28,16 +28,14 @@
         <article>
             <pre class="prettyprint source linenums"><code>/**
  * @author silence_zhpf
- * @description 在数组内移动数组中的元素
- * @param {Array} array 需要操作的数组
- * @param {number} [n=0] 需要移动的数量，如果为正数，则将前n个元素移动到数组后边（保持原有顺序），如果为负数，则将最后n个元素移动到数组前（保持原有顺序）
+ * @description 将原数组中第一个之后的数组组成一个新的数组返回，如果只有一个数组则直接返回原数组
+ * @param array {Array} 原数组
  * @return {Array}
  */
-function offset(array, n) {
-  return array.slice(n).concat(array.slice(0, n));
+function tail(array) {
+  return array.length > 1 ? array.slice(1) : array.slice();
 }
-
-exports.offset = offset;
+exports.tail = tail;
 </code></pre>
         </article>
     </section>
