@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Source: head.js</title>
+    <title>JSDoc: Source: none.js</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,7 +17,7 @@
 
 <div id="main">
 
-    <h1 class="page-title">Source: head.js</h1>
+    <h1 class="page-title">Source: none.js</h1>
 
 
 
@@ -28,16 +28,15 @@
         <article>
             <pre class="prettyprint source linenums"><code>/**
  * @author silence_zhpf
- * @description 返回数组中的第一个元素，如果传入的不是数组，则直接返回 undefined
- * @param array{*} 数组，如果不是数组，则返回 undefined, null
- * @returns {*} 数组中的第一个元素或者是 undefined
+ * @description 判断数组中的元素是否全部不符合断言，如果全部不符合->true，存在符合的->false
+ * @param array {Array} 原数组
+ * @param predicate {function(*): boolean} 断言函数
+ * @return {boolean}
  */
-exports.head = function head(array) {
-  if (Array.isArray(array)) {
-    return array[0];
-  }
-  return undefined;
-};
+function none(array, predicate = Boolean) {
+  return !array.some(value => predicate(value));
+}
+exports.none = none;
 </code></pre>
         </article>
     </section>
