@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Source: all.js</title>
+    <title>JSDoc: Source: dropRight.js</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,7 +17,7 @@
 
 <div id="main">
 
-    <h1 class="page-title">Source: all.js</h1>
+    <h1 class="page-title">Source: dropRight.js</h1>
 
 
 
@@ -28,15 +28,15 @@
         <article>
             <pre class="prettyprint source linenums"><code>/**
  * @author silence_zhpf
- * @description 根据断言函数判断数组中是否每个值都符合断言，都符合->true，存在不符合->false
- * @param array {Array} 原函数
- * @param fn {function(*): boolean} 断言函数
- * @return {boolean}
+ * @description 从array的尾部开始剔除n个值，返回剔除后剩余元素组成的数组
+ * @param array {Array} 原数组
+ * @param n {number} [n=1] 剔除的元素个数，默认为1
+ * @return {Array} 剩余元素组成的数组
  */
-function all(array, fn = Boolean) {
-  return array.every(value => fn(value));
+function dropRight(array, n = 1) {
+  return array.slice(0, -n);
 }
-exports.all = all;
+exports.dropRight = dropRight;
 </code></pre>
         </article>
     </section>
