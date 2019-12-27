@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Source: difference.js</title>
+    <title>JSDoc: Source: take.js</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,7 +17,7 @@
 
 <div id="main">
 
-    <h1 class="page-title">Source: difference.js</h1>
+    <h1 class="page-title">Source: take.js</h1>
 
 
 
@@ -28,17 +28,15 @@
         <article>
             <pre class="prettyprint source linenums"><code>/**
  * @author silence_zhpf
- * @description 返回第一个数组和第二个数组的差集（只存在于第一个，而不存在于第二个数组的元素的集合）
- * @param {Array} firstArray 第一个数组
- * @param {Array} secondArray 第二个数组
+ * @description 将原数组中第一个之后的数组组成一个新的数组返回，如果只有一个数组则直接返回原数组
+ * @param array {Array} 原数组
+ * @param n {number} [n=1] 取值数量，默认为1
  * @return {Array}
  */
-function difference(firstArray, secondArray) {
-  const set = new Set(secondArray);
-  return firstArray.filter(value => !set.has(value));
+function take(array, n = 1) {
+  return array.slice(0, n);
 }
-
-exports.difference = difference;
+exports.take = take;
 </code></pre>
         </article>
     </section>
