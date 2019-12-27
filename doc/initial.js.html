@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Source: includeAll.js</title>
+    <title>JSDoc: Source: initial.js</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,7 +17,7 @@
 
 <div id="main">
 
-    <h1 class="page-title">Source: includeAll.js</h1>
+    <h1 class="page-title">Source: initial.js</h1>
 
 
 
@@ -28,14 +28,14 @@
         <article>
             <pre class="prettyprint source linenums"><code>/**
  * @author silence_zhpf
- * @description 判断第一个数组（父数组）中是否含有第二个数组（子数组）中的全部元素
- * @param {Array} parentArray 父数组
- * @param {Array} childArray 子数组
- * @returns {boolean}
+ * @description 取数组中最后一个元素之外的元素组成一个新的数组，保持原有数组元素不变
+ * @param array {Array} 原数组
+ * @return {Array} 新数组
  */
-exports.includeAll = function includeAll(parentArray, childArray) {
-  return childArray.every(value => parentArray.includes(value));
-};
+function initial(array) {
+  return array.slice(0, -1);
+}
+exports.initial = initial;
 </code></pre>
         </article>
     </section>
