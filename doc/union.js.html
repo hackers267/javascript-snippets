@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Source: allEqual.js</title>
+    <title>JSDoc: Source: union.js</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,7 +17,7 @@
 
 <div id="main">
 
-    <h1 class="page-title">Source: allEqual.js</h1>
+    <h1 class="page-title">Source: union.js</h1>
 
 
 
@@ -28,16 +28,15 @@
         <article>
             <pre class="prettyprint source linenums"><code>/**
  * @author silence_zhpf
- * @description 判断数组中的值时间否相等，相等：true，不等：false
- * @param array {Array}
- * @return {boolean} [true|false]
+ * @description 取两个数组的合集
+ * @param source1 {Array} 原数组1
+ * @param source2 {Array} 原数组2
+ * @return {Array} 两个数组的合集
  */
-function allEqual(array) {
-  const set = new Set(array);
-  return set.size === 1;
+function union(source1, source2) {
+  return Array.from(new Set([...source1, ...source2]));
 }
-
-exports.allEqual = allEqual;
+exports.union = union;
 </code></pre>
         </article>
     </section>
