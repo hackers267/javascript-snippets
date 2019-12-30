@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Source: beginner/dropRight.js</title>
+    <title>JSDoc: Source: intermediate/countBy.js</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,7 +17,7 @@
 
 <div id="main">
 
-    <h1 class="page-title">Source: beginner/dropRight.js</h1>
+    <h1 class="page-title">Source: intermediate/countBy.js</h1>
 
 
 
@@ -28,15 +28,28 @@
         <article>
             <pre class="prettyprint source linenums"><code>/**
  * @author silence_zhpf
- * @description 从array的尾部开始剔除n个值，返回剔除后剩余元素组成的数组
- * @param array {Array} 原数组
- * @param n {number} [n=1] 剔除的元素个数，默认为1
- * @return {Array} 剩余元素组成的数组
+ * @description 返回由属性或者函数统计的数量，返回值为 Map
+ * @param array {Array} 需要统计的数组
+ * @param arg {function|string} 函数或者属性字符串
+ * @return {Map}
  */
-function dropRight(array, n = 1) {
-  return array.slice(0, -n);
+function countBy(array, arg) {
+  const isFn = typeof arg === "function";
+  const getProperty = val => val[arg];
+  return array
+    .map(val => (isFn ? arg(val) : getProperty(val)))
+    .reduce((acc, cur) => {
+      if (acc.has(cur)) {
+        const count = acc.get(cur);
+        acc.set(cur, count + 1);
+      } else {
+        const count = 1;
+        acc.set(cur, count);
+      }
+      return acc;
+    }, new Map());
 }
-exports.dropRight = dropRight;
+exports.countBy = countBy;
 </code></pre>
         </article>
     </section>
