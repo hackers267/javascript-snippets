@@ -1,4 +1,4 @@
-const { name } = require("../../../src/array/intermediate/name");
+const { name } = require("@/array/intermediate/name");
 
 describe("", () => {
   test("", () => {});
