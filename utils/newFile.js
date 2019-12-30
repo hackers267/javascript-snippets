@@ -4,8 +4,9 @@ const { Transform, pipeline } = require("stream");
 const { argv } = require("yargs");
 const chalk = require("chalk");
 
-const srcPath = resolve(__dirname, "../src/array");
-const testPath = resolve(__dirname, "../test/units/array");
+const commonPath = `array/intermediate`;
+const srcPath = resolve(__dirname, "../src/", commonPath);
+const testPath = resolve(__dirname, "../test/units/", commonPath);
 const fileName = argv.file;
 const testName = resolve(testPath, `${fileName}.test.js`);
 const srcName = resolve(srcPath, `${fileName}.js`);
