@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Home</title>
+    <title>JSDoc: Source: beginner/nthElement.js</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,32 +17,30 @@
 
 <div id="main">
 
-    <h1 class="page-title">Home</h1>
+    <h1 class="page-title">Source: beginner/nthElement.js</h1>
 
 
 
 
 
 
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
+ * @author silence_zhpf
+ * @description 取第n个元素
+ * @param array {Array} 需要取值的元素
+ * @param n {number} [n=0] 取值元素的下标
+ * @return {*}
+ */
+function nthElement(array, n = 0) {
+  return (n === -1 ? array.slice(n) : array.slice(n, n + 1))[0];
+}
 
-
-    <h3> </h3>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+exports.nthElement = nthElement;
+</code></pre>
+        </article>
+    </section>
 
 
 

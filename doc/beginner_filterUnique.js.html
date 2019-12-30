@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Home</title>
+    <title>JSDoc: Source: beginner/filterUnique.js</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,32 +17,34 @@
 
 <div id="main">
 
-    <h1 class="page-title">Home</h1>
+    <h1 class="page-title">Source: beginner/filterUnique.js</h1>
 
 
 
 
 
 
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
+ * @author silence_zhpf
+ * @description 获取数组元素中的唯一值，实现中认为 NaN和自身是相等的。
+ * @param array {Array} 需要处理的数组
+ * @return {Array} 只含有唯一值的数组
+ */
+function filterUnique(array) {
+  return array.filter(value => {
+    const index = array.findIndex(value1 => Object.is(value1, value));
+    const remainArray = array.slice(index + 1);
+    const nextIndex = remainArray.findIndex(value1 => Object.is(value1, value));
+    return nextIndex === -1;
+  });
+}
 
-
-    <h3> </h3>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+exports.filterUnique = filterUnique;
+</code></pre>
+        </article>
+    </section>
 
 
 

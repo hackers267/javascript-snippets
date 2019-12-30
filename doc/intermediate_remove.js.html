@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Home</title>
+    <title>JSDoc: Source: intermediate/remove.js</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,32 +17,34 @@
 
 <div id="main">
 
-    <h1 class="page-title">Home</h1>
+    <h1 class="page-title">Source: intermediate/remove.js</h1>
 
 
 
 
 
 
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
+ * @callback fn
+ * @param {*} value 输入值
+ * @return {boolean}
+ */
 
-
-    <h3> </h3>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/**
+ * @author silence_zhpf
+ * @description 根据断言函数(fn)移除数组中断言函数为true的数组，并返回新的数组
+ * @param {Array} arr 需要整理的数组
+ * @param {fn} fn
+ * @returns {Array}
+ */
+exports.remove = function remove(arr, fn) {
+  return Array.isArray(arr) ? arr.filter(val => !fn(val)) : [];
+};
+</code></pre>
+        </article>
+    </section>
 
 
 

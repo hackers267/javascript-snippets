@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Home</title>
+    <title>JSDoc: Source: beginner/dropRight.js</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,32 +17,29 @@
 
 <div id="main">
 
-    <h1 class="page-title">Home</h1>
+    <h1 class="page-title">Source: beginner/dropRight.js</h1>
 
 
 
 
 
 
-
-
-    <h3> </h3>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
+ * @author silence_zhpf
+ * @description 从array的尾部开始剔除n个值，返回剔除后剩余元素组成的数组
+ * @param array {Array} 原数组
+ * @param n {number} [n=1] 剔除的元素个数，默认为1
+ * @return {Array} 剩余元素组成的数组
+ */
+function dropRight(array, n = 1) {
+  return array.slice(0, -n);
+}
+exports.dropRight = dropRight;
+</code></pre>
+        </article>
+    </section>
 
 
 

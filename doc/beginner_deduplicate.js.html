@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Home</title>
+    <title>JSDoc: Source: beginner/deduplicate.js</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,32 +17,28 @@
 
 <div id="main">
 
-    <h1 class="page-title">Home</h1>
+    <h1 class="page-title">Source: beginner/deduplicate.js</h1>
 
 
 
 
 
 
-
-
-    <h3> </h3>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
+ * @author silence_zhpf
+ * @description 数组去重
+ * @param array {Array} 需要去重的数组
+ * @return {Array} 去重后的数组
+ */
+function deduplicate(array) {
+  return Array.from(new Set(array));
+}
+exports.deduplicate = deduplicate;
+</code></pre>
+        </article>
+    </section>
 
 
 

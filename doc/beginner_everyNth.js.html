@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Home</title>
+    <title>JSDoc: Source: beginner/everyNth.js</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,32 +17,30 @@
 
 <div id="main">
 
-    <h1 class="page-title">Home</h1>
+    <h1 class="page-title">Source: beginner/everyNth.js</h1>
 
 
 
 
 
 
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
+ * @author silence_zhpf
+ * @description 从array中每间隔 n 个元素挑选出一个元素，组成新的数组
+ * @param array {Array} 元素数组
+ * @param n {number}  间隔
+ * @return {Array} 组成的新数组
+ */
+function everyNth(array, n) {
+  return array.filter((_, index) => index % n === n - 1);
+}
 
-
-    <h3> </h3>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+exports.everyNth = everyNth;
+</code></pre>
+        </article>
+    </section>
 
 
 
