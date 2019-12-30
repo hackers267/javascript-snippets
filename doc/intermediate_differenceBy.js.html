@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Source: beginner/allEqual.js</title>
+    <title>JSDoc: Source: intermediate/differenceBy.js</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,7 +17,7 @@
 
 <div id="main">
 
-    <h1 class="page-title">Source: beginner/allEqual.js</h1>
+    <h1 class="page-title">Source: intermediate/differenceBy.js</h1>
 
 
 
@@ -28,16 +28,22 @@
         <article>
             <pre class="prettyprint source linenums"><code>/**
  * @author silence_zhpf
- * @description 判断数组中的值时间否相等，相等：true，不等：false
- * @param array {Array}
- * @return {boolean} [true|false]
+ * @description 根据函数取第一个数组和第二个数组的差集
+ * @param arr {Array} 第一个数组
+ * @param arr2 {Array} 第二个数组
+ * @param fn {function} 取差集的函数
+ * @return {Array}
  */
-function allEqual(array) {
-  const set = new Set(array);
-  return set.size === 1;
+function differenceBy(arr, arr2, fn) {
+  const set2 = new Set(arr2.map(fn));
+  const arrValue = arr.map(fn);
+  const filterValue = arrValue.filter(value => !set2.has(value));
+  return arr.filter(item => {
+    const value = fn(item);
+    return filterValue.includes(value);
+  });
 }
-
-exports.allEqual = allEqual;
+exports.differenceBy = differenceBy;
 </code></pre>
         </article>
     </section>
