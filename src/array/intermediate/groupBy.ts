@@ -5,11 +5,9 @@
  * @param arg {function|string} 分组依据：函数或者属性
  * @return {Object} 分组结果
  */
-function groupBy(array, arg) {
-  const isFn = typeof arg === "function";
-  const getProperty = val => val[arg];
+function groupBy<T>(array: Array<T>, fn: Function) {
   return array
-    .map(val => (isFn ? arg(val) : getProperty(val)))
+    .map(val => fn(val))
     .reduce((acc, cur, index) => {
       const hasCur = acc[cur];
       if (hasCur) {
@@ -21,4 +19,5 @@ function groupBy(array, arg) {
       return acc;
     }, {});
 }
-exports.groupBy = groupBy;
+
+export { groupBy };

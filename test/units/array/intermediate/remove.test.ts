@@ -1,4 +1,4 @@
-const { remove } = require("../../../../src/array/intermediate/remove");
+import { remove } from "../../../../src/array/intermediate/remove";
 
 describe("The remove of Array", () => {
   let arr;

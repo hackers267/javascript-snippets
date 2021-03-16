@@ -11,24 +11,32 @@ module.exports = {
   extends: [
     "airbnb-base",
     "plugin:prettier/recommended",
+    "plugin:@typescript-eslint/recommended",
     "plugin:jest/recommended"
   ],
   globals: {
     Atomics: "readonly",
     SharedArrayBuffer: "readonly"
   },
+  parser: "@typescript-eslint/parser",
   parserOptions: {
-    ecmaVersion: 2018
+    ecmaVersion: 2018,
+    sourceType: "module"
   },
   rules: {
-    "prettier/prettier": "error"
+    "prettier/prettier": "error",
+    "import/prefer-default-export": "off",
+    "import/extensions": ["error", "always", { js: "never", ts: "never" }]
   },
   settings: {
     "import/resolver": {
       alias: {
-        map: [["@", path.resolve("./src")]]
-      },
-      extensions: [".js"]
+        map: [["@src", "./src"]],
+        extensions: [".ts", ".js"]
+      }
+    },
+    "import/parsers": {
+      "@typescript-eslint/parser": [".ts"]
     }
   }
 };

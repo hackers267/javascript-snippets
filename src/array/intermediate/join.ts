@@ -1,4 +1,9 @@
-const defaultConfig = {
+interface Config {
+  prefix: string;
+  separator: string;
+  postfix: string;
+}
+const defaultConfig: Config = {
   prefix: "",
   separator: ",",
   postfix: ""
@@ -14,8 +19,8 @@ const defaultConfig = {
  * @param {String} [config.separator=,]  分隔符
  * @return {string}
  */
-function join(array, config = defaultConfig) {
+function join<T>(array: Array<T>, config = defaultConfig): string {
   const { prefix = "", separator = ",", postfix = "" } = config;
   return prefix + array.join(separator) + postfix;
 }
-exports.join = join;
+export { join };

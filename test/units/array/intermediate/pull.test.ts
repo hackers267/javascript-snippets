@@ -1,4 +1,4 @@
-const { pull } = require("@/array/intermediate/pull");
+import { pull } from "@/array/intermediate/pull";
 
 describe("从原数组剔除元素", () => {
   test("多个参数", () => {

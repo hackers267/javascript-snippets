@@ -1,4 +1,4 @@
-const { shuffle } = require("@/array/intermediate/shuffle");
+import { shuffle } from "@/array/intermediate/shuffle";
 
 describe("将数组内的元素随机化", () => {
   test("随机化", () => {

@@ -1,11 +1,11 @@
-const path = require("path");
+import { resolve } from "path";
 
 module.exports = {
-  context: path.resolve("./"),
+  context: resolve("./"),
   resolve: {
-    extensions: [".js"],
+    extensions: [".js", ".ts"],
     alias: {
-      "@": path.resolve("src")
+      "@src": resolve("src")
     }
   }
 };

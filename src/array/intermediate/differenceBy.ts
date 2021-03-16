@@ -6,7 +6,11 @@
  * @param fn {function} 取差集的函数
  * @return {Array}
  */
-function differenceBy(arr, arr2, fn) {
+function differenceBy<T>(
+  arr: Array<T>,
+  arr2: Array<T>,
+  fn: (val: any) => boolean
+): Array<T> {
   const set2 = new Set(arr2.map(fn));
   const arrValue = arr.map(fn);
   const filterValue = arrValue.filter(value => !set2.has(value));
@@ -15,4 +19,4 @@ function differenceBy(arr, arr2, fn) {
     return filterValue.includes(value);
   });
 }
-exports.differenceBy = differenceBy;
+export { differenceBy };

@@ -1,4 +1,4 @@
-const { join } = require("@/array/intermediate/join");
+import { join } from "@/array/intermediate/join";
 
 describe("数组的join方法", () => {
   test("前缀、后缀和分隔符都使用默认值", () => {

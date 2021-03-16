@@ -1,4 +1,6 @@
-const { filterNonUnique } = require("../../../../src/array/beginner/fitlerNonUnique");
+const {
+  filterNonUnique
+} = require("../../../../src/array/beginner/fitlerNonUnique");
 
 describe("过滤出数组中的非唯一值", () => {
   test("过滤", () => {

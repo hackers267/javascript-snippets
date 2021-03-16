@@ -1,4 +1,4 @@
-const { differenceBy } = require("@/array/intermediate/differenceBy");
+import { differenceBy } from "@src/array/intermediate/differenceBy";
 
 describe("取差集", () => {
   test("根据函数取差集", () => {
